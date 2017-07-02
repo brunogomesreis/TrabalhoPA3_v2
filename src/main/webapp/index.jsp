@@ -8,12 +8,15 @@
         <title>3º Trabalho</title>
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script type="application/javascript" src="js/index.js"></script>
+        
     </head>
     
     <body>
         <div id="divPrincipal">
             <span>Alarme de CO</span>
+            <br>
+            <span id="idMensagens" style="font-size:20pt;">&nbsp;</span>
+            
             <br>
             <br>
             <br>
@@ -22,10 +25,13 @@
             <br>
             <br>
             <div class="divBotao">ACK<br><span class="font_pequeno">(desliga alarme sonoro)</span></div>
-            <div class="divBotao">RESET<br><span class="font_pequeno">(rearma o alarme)</span></div>
-            <div class="divBotao">TEST</div>
+            <div class="divBotao" onclick="desconectar();">RESET<br><span class="font_pequeno">(rearma o alarme)</span></div>
+            <div class="divBotao" onclick="conectar();">TEST</div>
             <br>
             <br>
         </div>
+        <script type="application/javascript" src="js/index.js"></script>
+        <script type="application/javascript" src="js/jquery-1.11.1.min.js"></script>
+        
     </body>
 </html>

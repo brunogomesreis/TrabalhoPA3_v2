@@ -19,6 +19,9 @@ public class Input extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        System.out.println("Entrei no input");
+        
         response.setContentType("application/json");
         
         System.out.println("nome="+request.getParameter("nome"));
