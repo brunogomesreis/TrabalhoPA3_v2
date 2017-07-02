@@ -1,0 +1,38 @@
+
+
+body{
+    background-color:gray;
+    margin:0px;
+    font-family:'Raleway';
+    font-size:20pt;
+    font-weight:bold;
+}
+#divPrincipal{
+    width:500px;
+    height:700px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    border:2px solid white;
+    border-radius:10px;
+    background-color:#eeeeee;
+    opacity:0.8;
+    text-align:center;
+}
+.divBotao{
+    width:400px;
+    height:70px;
+    margin-left:auto;
+    margin-right:auto;
+    border:2px solid white;
+    border-radius:10px;
+    background-color:skyblue;
+    opacity:0.9;
+    text-align:center;
+    cursor:pointer;
+}
+.font_pequeno{
+    font-size:0.7em;
+}
+
+
