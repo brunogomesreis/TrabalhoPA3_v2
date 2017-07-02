@@ -21,11 +21,11 @@
             <br>
             <br>
             <br>
-            <img id="imagem" src="images/alarm_home.jpg" alt="" width="200"/>
+            <img id="imagem" src="images/alarm_home_normal.jpg" alt="" width="200"/>
             <br>
             <br>
             <div class="divBotao">ACK<br><span class="font_pequeno">(desliga alarme sonoro)</span></div>
-            <div class="divBotao" onclick="desconectar();">RESET<br><span class="font_pequeno">(rearma o alarme)</span></div>
+            <div class="divBotao" onclick="resetarAlarme();">RESET<br><span class="font_pequeno">(rearma o alarme)</span></div>
             <div class="divBotao" onclick="conectar();">Conectar</div>
             <div class="divBotao" onclick="desconectar();">Desconectar</div>
             

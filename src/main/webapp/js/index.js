@@ -9,6 +9,16 @@ function mudaCorAlarme(alarme){
         $('#imagem').attr("src","images/alarm_home_normal.jpg");
 }
 
+function resetarAlarme(){
+     websocket.onmessage = function (evt) {
+        var json = JSON.parse(evt.data);
+        if (typeof evt.data === "string") {
+             mudaCorAlarme(json.mensagem);
+        } else {
+            console.log('Recebeu dados binários! E agora?');
+        }
+    };
+}
 
 function conectar() {
     var wsUri = "ws://localhost:8084/terceiro_trabalho/soquete";
@@ -27,7 +37,9 @@ function conectar() {
     websocket.onmessage = function (evt) {
         var json = JSON.parse(evt.data);
         if (typeof evt.data === "string") {
-            mudaCorAlarme(json.mensagem);
+            if (json.mensagem==="true"){
+                mudaCorAlarme("true");
+            }
         } else {
             console.log('Recebeu dados binários! E agora?');
         }
