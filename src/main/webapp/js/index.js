@@ -22,10 +22,11 @@ function conectar() {
 
     websocket.onopen = function(ev){console.log('=== Conectou');}
     
+    $('#idMensagens').html('Conectado');
+    
     websocket.onmessage = function (evt) {
         var json = JSON.parse(evt.data);
         if (typeof evt.data === "string") {
-            $('#idMensagens').html(json.mensagem);
             mudaCorAlarme(json.mensagem);
         } else {
             console.log('Recebeu dados binários! E agora?');
