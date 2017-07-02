@@ -2,6 +2,14 @@
 
 var websocket;
 //------------------------------------------------------------------------------
+function mudaCorAlarme(alarme){
+    if (alarme==="true"){
+        $('#imagem').attr("src","images/alarm_home.jpg");}
+    else
+        $('#imagem').attr("src","images/alarm_home_normal.jpg");
+}
+
+
 function conectar() {
     var wsUri = "ws://localhost:8084/terceiro_trabalho/soquete";
     try {
@@ -18,6 +26,7 @@ function conectar() {
         var json = JSON.parse(evt.data);
         if (typeof evt.data === "string") {
             $('#idMensagens').html(json.mensagem);
+            mudaCorAlarme(json.mensagem);
         } else {
             console.log('Recebeu dados binários! E agora?');
         }
@@ -49,5 +58,7 @@ function fazerPedidoHTTP() {
                 }
             }
     );
+    
+
 }
 //------------------------------------------------------------------------------
