@@ -16,7 +16,7 @@
             <span>Alarme de CO</span>
             <br>
             <span id="idMensagens" style="font-size:20pt;">&nbsp;</span>
-            <audio id="som-alarme"  src="" preload="auto" autoplay></audio>
+            <audio id="som-alarme"  src="audio/alarm.mp3" preload="auto" loop></audio>
             <br>
             <br>
             <br>
