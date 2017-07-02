@@ -9,6 +9,17 @@ function mudaCorAlarme(alarme){
         $('#imagem').attr("src","images/alarm_home_normal.jpg");
 }
 
+function mudaSomAlarme(som){
+    if (som==="true"){
+        $('#som-alarme').attr("src","audio/alarm.mp3");}
+    else
+        $('#som-alarme').attr("src","");
+}
+
+function desligaSomAlarme(){
+    mudaSomAlarme("false");
+}
+
 function resetarAlarme(){
      websocket.onmessage = function (evt) {
         var json = JSON.parse(evt.data);
