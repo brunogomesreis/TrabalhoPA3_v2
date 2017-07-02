@@ -11,9 +11,14 @@ function mudaCorAlarme(alarme){
 
 function mudaSomAlarme(som){
     if (som==="true"){
-        $('#som-alarme').attr("src","audio/alarm.mp3");}
+        $('#som-alarme').removeAttr("muted");
+        $('#som-alarme').attr("autoplay","true");
+        
+    }
     else
-        $('#som-alarme').attr("src","");
+        $('#som-alarme').removeAttr("autoplay");
+        $('#som-alarme').attr("muted","true");
+        
 }
 
 function desligaSomAlarme(){
@@ -50,6 +55,7 @@ function conectar() {
         if (typeof evt.data === "string") {
             if (json.mensagem==="true"){
                 mudaCorAlarme("true");
+                mudaSomAlarme("true");
             }
         } else {
             console.log('Recebeu dados binários! E agora?');
