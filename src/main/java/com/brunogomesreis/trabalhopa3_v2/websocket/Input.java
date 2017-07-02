@@ -24,9 +24,12 @@ public class Input extends HttpServlet {
         
         response.setContentType("application/json");
         
-        System.out.println("nome="+request.getParameter("nome"));
+        System.out.println("alarme="+request.getParameter("alarme"));
+        
+        String alarme = request.getParameter("alarme");
+
         com.brunogomesreis.trabalhopa3_v2.websocket.Soquete.session.getBasicRemote().sendText(
-                                   "{\"mensagem\":\"Resposta do servlet pelo websocket!\"}");
+                                   "{\"mensagem\":\""+ alarme +"\"}");
         
         try (PrintWriter out = response.getWriter()) {
             out.print("");
