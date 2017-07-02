@@ -1,4 +1,4 @@
-package eel418.terceiro_trabalho.simulador;
+package com.brunogomesreis.trabalhopa3_v2.simulador;
 
 import java.awt.Color;
 import java.io.BufferedReader;
@@ -42,7 +42,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 450));
-        setPreferredSize(new java.awt.Dimension(600, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
