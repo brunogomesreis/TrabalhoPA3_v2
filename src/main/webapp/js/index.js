@@ -11,13 +11,12 @@ function mudaCorAlarme(alarme){
 
 function mudaSomAlarme(som){
     if (som==="true"){
-        $('#som-alarme').removeAttr("muted");
+        $('#som-alarme').attr("src","audio/alarm.mp3");
         $('#som-alarme').attr("autoplay","true");
         
     }
     else
-        $('#som-alarme').removeAttr("autoplay");
-        $('#som-alarme').attr("muted","true");
+        $('#som-alarme').attr("src","");
         
 }
 
@@ -30,6 +29,7 @@ function resetarAlarme(){
         var json = JSON.parse(evt.data);
         if (typeof evt.data === "string") {
              mudaCorAlarme(json.mensagem);
+             mudaSomAlarme(json.mensagem);
         } else {
             console.log('Recebeu dados binários! E agora?');
         }
